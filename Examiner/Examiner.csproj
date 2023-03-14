@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E52B74C8-EB61-4F63-BD09-7A3D868A903D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Examiner</RootNamespace>
+    <AssemblyName>Examiner</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.8.0\lib\net462\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Video, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Video.3.8.0\lib\net462\Accord.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Video.FFMPEG, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=x86">
+      <HintPath>..\packages\Accord.Video.FFMPEG.3.8.0\lib\net462\Accord.Video.FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CapturePanel.xaml.cs">
+      <DependentUpon>CapturePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaseDetailPanel.xaml.cs">
+      <DependentUpon>CaseDetailPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaseItem.xaml.cs">
+      <DependentUpon>CaseItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaseList.xaml.cs">
+      <DependentUpon>CaseList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExaminePage.xaml.cs">
+      <DependentUpon>ExaminePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MediaReviewPanel.xaml.cs">
+      <DependentUpon>MediaReviewPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPlayer.xaml.cs">
+      <DependentUpon>VideoPlayer.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CapturePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaseDetailPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaseItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaseList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateCasePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExaminePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CreateCasePage.xaml.cs">
+      <DependentUpon>CreateCasePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MediaReviewPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VideoPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="assets\fonts\Montserrat-Black.otf" />
+    <Resource Include="assets\fonts\Montserrat-BlackItalic.ttf" />
+    <Resource Include="assets\fonts\Montserrat-Bold.otf" />
+    <Resource Include="assets\fonts\Montserrat-BoldItalic.ttf" />
+    <Resource Include="assets\fonts\Montserrat-ExtraBold.ttf" />
+    <Resource Include="assets\fonts\Montserrat-ExtraBoldItalic.ttf" />
+    <Resource Include="assets\fonts\Montserrat-ExtraLight.ttf" />
+    <Resource Include="assets\fonts\Montserrat-ExtraLightItalic.ttf" />
+    <Resource Include="assets\fonts\Montserrat-Italic-VariableFont_wght.ttf" />
+    <Resource Include="assets\fonts\Montserrat-Italic.ttf" />
+    <Resource Include="assets\fonts\Montserrat-Light.otf" />
+    <Resource Include="assets\fonts\Montserrat-LightItalic.ttf" />
+    <Resource Include="assets\fonts\Montserrat-Medium.ttf" />
+    <Resource Include="assets\fonts\Montserrat-MediumItalic.ttf" />
+    <Resource Include="assets\fonts\Montserrat-Regular.otf" />
+    <Resource Include="assets\fonts\Montserrat-SemiBold.ttf" />
+    <Resource Include="assets\fonts\Montserrat-SemiBoldItalic.ttf" />
+    <Resource Include="assets\fonts\Montserrat-VariableFont_wght.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="capture.jpg" />
+    <Resource Include="assets\images landscape\capture\button_burst.png" />
+    <Resource Include="assets\images landscape\capture\button_photo.png" />
+    <Resource Include="assets\images landscape\capture\button_video1.png" />
+    <Resource Include="assets\images landscape\capture\button_video2.png" />
+    <Resource Include="assets\images landscape\capture\capture.jpg" />
+    <Resource Include="assets\images landscape\case details\icon_addmedia.png" />
+    <Resource Include="assets\images landscape\general\bg_generalpage.jpg" />
+    <Resource Include="assets\images landscape\general\icon_close.png" />
+    <Resource Include="assets\images landscape\general\navbar_capture0.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_capture1.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_capture2.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_casedetails1.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_casedetails2.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_caselist1.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_caselist2.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_mediareview0.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_mediareview1.jpg" />
+    <Resource Include="assets\images landscape\general\navbar_mediareview2.jpg" />
+    <Resource Include="assets\images landscape\media review\button_play.png" />
+    <Resource Include="assets\images landscape\media review\button_stop.png" />
+    <Resource Include="assets\images landscape\media review\icon_addmedia.png" />
+    <Resource Include="assets\images landscape\media review\icon_video.png" />
+    <Content Include="assets\images landscape\splash\bg.jpg" />
+    <Resource Include="assets\images landscape\splash\logo.png" />
+    <Resource Include="assets\images landscape\start\logo.png" />
+    <Resource Include="assets\images\capture\button_burst.png" />
+    <Resource Include="assets\images\capture\button_photo.png" />
+    <Resource Include="assets\images\capture\button_video1.png" />
+    <Resource Include="assets\images\capture\button_video2.png" />
+    <Resource Include="assets\images\capture\icon_swapcamera.png" />
+    <Resource Include="assets\images\case details\button_archive.png" />
+    <Resource Include="assets\images\case details\button_complete.png" />
+    <Resource Include="assets\images\case details\button_delete.png" />
+    <Resource Include="assets\images\case details\button_save.png" />
+    <Resource Include="assets\images\case details\gallery_addmedia.png" />
+    <Resource Include="assets\images\case details\gallery_video.png" />
+    <Resource Include="assets\images\case details\icon_edit.png" />
+    <Resource Include="assets\images\case details\separator.png" />
+    <Resource Include="assets\images\general\bg_generalpage.jpg" />
+    <Resource Include="assets\images\general\header_back.png" />
+    <Resource Include="assets\images\general\icon_close.png" />
+    <Resource Include="assets\images\general\navbar_capture0.jpg" />
+    <Resource Include="assets\images\general\navbar_capture1.jpg" />
+    <Resource Include="assets\images\general\navbar_capture2.jpg" />
+    <Resource Include="assets\images\general\navbar_casedetails1.jpg" />
+    <Resource Include="assets\images\general\navbar_casedetails2.jpg" />
+    <Resource Include="assets\images\general\navbar_caselist1.jpg" />
+    <Resource Include="assets\images\general\navbar_caselist2.jpg" />
+    <Resource Include="assets\images\general\navbar_mediareview0.jpg" />
+    <Resource Include="assets\images\general\navbar_mediareview1.jpg" />
+    <Resource Include="assets\images\general\navbar_mediareview2.jpg" />
+    <Resource Include="assets\images\general\typing.png" />
+    <Resource Include="assets\images\media review\button_play.png" />
+    <Resource Include="assets\images\media review\button_stop.png" />
+    <Resource Include="assets\images\media review\gallery_addmedia.png" />
+    <Resource Include="assets\images\new case\button_savestartcase.png" />
+    <Resource Include="assets\images\popups\button_archive.png" />
+    <Resource Include="assets\images\popups\button_cancel.png" />
+    <Resource Include="assets\images\popups\button_complete.png" />
+    <Resource Include="assets\images\popups\button_delete.png" />
+    <Resource Include="assets\images\popups\icon_archive.png" />
+    <Resource Include="assets\images\popups\icon_complete.png" />
+    <Resource Include="assets\images\popups\icon_delete.png" />
+    <Resource Include="assets\images\popups\separator.png" />
+    <Resource Include="assets\images\splash\bg.jpg" />
+    <Resource Include="assets\images\splash\logo.png" />
+    <Resource Include="assets\images\start\bg.jpg" />
+    <Resource Include="assets\images\start\button_caselist.png" />
+    <Resource Include="assets\images\start\button_startnew.png" />
+    <Resource Include="assets\images\start\logo.png" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_casedetails_archiveconfirm.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_casedetails_archived.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_casedetails_completeconfirm.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_casedetails_confirm.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_casedetails_edit.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_casedetails_examcomplete.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_casedetails_inprogress.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_fullsize.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_fullsize_stop.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_gallery.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_archiveconfirm.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_casedetails_archived.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_casedetails_confirm.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_casedetails_edit.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_casedetails_examcomplete.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_casedetails_inprogress.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_completeconfirm.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_fullsize.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_fullsize_stop.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_gallery.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_liveimage.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_liveimage_recording.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_newcase.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_pendingcases.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_splash.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_landsc_start.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_liveimage.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_liveimage_recording.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_newcase.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_pendingcases.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_splash.jpg" />
+    <Resource Include="assets\mockups\Respond_Examiner_mobile_start.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\images landscape\new case\" />
+    <Folder Include="assets\images landscape\popups\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
+    <Error Condition="!Exists('..\packages\Accord.Video.FFMPEG.3.8.0\build\Accord.Video.FFMPEG.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.Video.FFMPEG.3.8.0\build\Accord.Video.FFMPEG.targets'))" />
+  </Target>
+  <Import Project="..\packages\Accord.Video.FFMPEG.3.8.0\build\Accord.Video.FFMPEG.targets" Condition="Exists('..\packages\Accord.Video.FFMPEG.3.8.0\build\Accord.Video.FFMPEG.targets')" />
+</Project>

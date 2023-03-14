@@ -1,0 +1,271 @@
+﻿<Page x:Class="Examiner.CreateCasePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Examiner"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CreateCasePage">
+
+    <Grid Cursor="Hand">
+        <Image Source="/assets/images landscape/splash/bg.jpg" Stretch="Fill"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Image Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/assets/images/general/header_back.png" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown" Cursor="Hand"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2">
+                <Label Content="Create New Case" FontSize="50" FontFamily="./assets/fonts/#Montserrat" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF36485C" Height="Auto"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="6">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="5">
+                        <TextBox  x:Name="firstname" TextAlignment="Center" FontSize="50" FontFamily="./assets/fonts/#Montserrat" Padding="5,50,40,10" TextWrapping="Wrap" Text="Smith" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="#FF36485C"  Margin="0,0,0,0" >
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="20"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="7" Grid.RowSpan="3" Grid.ColumnSpan="5">
+                        <TextBox  x:Name="lastname" TextAlignment="Center" FontSize="50" FontFamily="./assets/fonts/#Montserrat" Padding="5,50,40,10" TextWrapping="Wrap" Text="Smith" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="#FF36485C"  Margin="0,0,0,0" >
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="20"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="13" Grid.RowSpan="3" Grid.ColumnSpan="10">
+                        <TextBox  TextAlignment="Center" FontSize="50" FontFamily="./assets/fonts/#Montserrat" Padding="5,50,40,10" TextWrapping="Wrap" Text="Examiner" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="#FF36485C"  Margin="0,0,0,0" >
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="20"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="0" Grid.RowSpan="2"  Grid.ColumnSpan="6">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="1" Grid.RowSpan="5" Grid.ColumnSpan="10" Grid.Column="1">
+                        <TextBox x:Name="mrn" TextAlignment="Center" FontSize="60" FontFamily="./assets/fonts/#Montserrat" Padding="5,50,40,10" TextWrapping="Wrap" Text="011415" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="#FF36485C"  Margin="0,0,0,0">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="20"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.RowSpan="5" Grid.ColumnSpan="9" Grid.Column="12">
+                        <TextBox  TextAlignment="Center" FontSize="60" FontFamily="./assets/fonts/#Montserrat" Padding="5,50,40,10" TextWrapping="Wrap" Text="Location of exam" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="#FF36485C"  Margin="0,0,0,0">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="20"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="4" Grid.ColumnSpan="2">
+                    <Image Source="/assets/images/new case/button_savestartcase.png" Stretch="Fill" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_1" Margin="0"/>
+                </Grid> 
+            </Grid>
+        </Grid>
+
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                
+            </Grid>
+            <Grid Grid.Row="1" Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Grid.Column="0">
+                    <TextBox  FontSize="56" FontFamily="./assets/fonts/#Montserrat" Padding="0,0,0,0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sarah" VerticalAlignment="Center" Width="241" Foreground="#FF36485C" Height="90" Margin="26,0,0,0">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="20"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <TextBox FontSize="56" FontFamily="./assets/fonts/#Montserrat" Padding="0,0,0,0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sarah" VerticalAlignment="Center" Width="267" Foreground="#FF36485C" Height="90">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="20"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <TextBox FontSize="56" FontFamily="./assets/fonts/#Montserrat" Padding="0,0,0,0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sarah" VerticalAlignment="Center" Width="248" Foreground="#FF36485C" Margin="0,0,18,0" TextChanged="TextBox_TextChanged" Height="90">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="20"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    <TextBox FontSize="56" FontFamily="./assets/fonts/#Montserrat" Padding="0,0,0,0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sarah" VerticalAlignment="Center" Width="511" Foreground="#FF36485C" Margin="23,0,0,0" Height="90">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="20"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <TextBox FontSize="56" FontFamily="./assets/fonts/#Montserrat" Padding="0,0,0,0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sarah" VerticalAlignment="Center" Width="240" Foreground="#FF36485C" Margin="0,0,26,0" Height="90">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="20"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="1"  Source="/assets/images/new case/button_savestartcase.png" Stretch="Fill" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_1" Margin="30"/>
+            </Grid>
+        </Grid>-->
+        <Image Margin="94,70,1739,944" Source="/assets/images/general/header_back.png" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+
+    </Grid>
+</Page>

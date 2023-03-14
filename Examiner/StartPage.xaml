@@ -1,0 +1,73 @@
+﻿<Page x:Class="Examiner.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Examiner"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="StartPage">
+
+    <Grid>
+        <Image Source="/assets/images landscape/splash/bg.jpg" Stretch="Fill" Margin="0,0,-36,-30"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Image Source="/assets/images landscape/splash/logo.png" Stretch="Fill"/>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Image Height="50" Width="50" Source="/assets/images/general/icon_close.png" Stretch="Fill" Cursor="Hand" MouseLeftButtonUp="Image_MouseLeftButtonUp_2"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Image Source="/assets/images/start/button_caselist.png" Stretch="Fill" Cursor="Hand"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="4*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Image Source="/assets/images/start/button_startnew.png" Stretch="Fill" Cursor="Hand" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+                </Grid>
+            </Grid>
+
+
+        </Grid>
+        <!--<Image Source="/assets/images landscape/splash/bg.jpg" Stretch="Fill" Margin="0,0,-36,-30"/>
+        <Image Margin="1029,710,295,172" Source="/assets/images/start/button_startnew.png" Stretch="Fill" Cursor="Hand" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+        <Image Margin="256,710,1002,172" Source="/assets/images/start/button_caselist.png" Stretch="Fill" Cursor="Hand" MouseLeftButtonUp="Image_MouseLeftButtonUp_1"/>
+        <Image Margin="556,-78,556,688" Source="/assets/images landscape/splash/logo.png" Stretch="Fill"/>
+        <Image Margin="1734,133,115,877" Source="/assets/images/general/icon_close.png" Stretch="Fill" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>-->
+    </Grid>
+</Page>

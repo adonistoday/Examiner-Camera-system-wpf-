@@ -1,0 +1,49 @@
+﻿<Page x:Class="Examiner.ExaminePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Examiner"
+        mc:Ignorable="d"
+        Title="ExaminPage" Height="Auto" Width="Auto">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+        <Grid.ContextMenu>
+            <ContextMenu/>
+        </Grid.ContextMenu>
+        <Grid.Background>
+            <ImageBrush ImageSource="/assets/images landscape/splash/bg.jpg"/>
+        </Grid.Background>
+
+        <Label Content="Create New Case" FontSize="56" FontFamily="./assets/fonts/#Montserrat" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF36485C"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="9*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="1" Name="CaptureBtn" Source="/assets/images landscape/general/navbar_capture1.jpg"  MouseLeftButtonDown="CaptureBtn_MouseLeftButtonDown" HorizontalAlignment="Stretch"/>
+            <Image Grid.Row="1" Grid.Column="1" Name="MediaReviewBtn" Source="/assets/images landscape/general/navbar_mediareview1.jpg"  MouseLeftButtonDown="MediaReviewBtn_MouseLeftButtonDown" HorizontalAlignment="Stretch"/>
+            <Image Grid.Row="2" Grid.Column="1" Name="CaseDetailBtn" Source="/assets/images landscape/general/navbar_casedetails1.jpg"  MouseLeftButtonDown="CaseDetailBtn_MouseLeftButtonDown" HorizontalAlignment="Stretch"/>
+            <Image Grid.Row="3" Grid.Column="1" Name="CaseListBtn" Source="/assets/images landscape/general/navbar_caselist1.jpg"  MouseLeftButtonDown="CaseListBtn_MouseLeftButtonDown" HorizontalAlignment="Stretch"/>
+            <Grid Grid.Row="1" Grid.Column="0" Grid.RowSpan="3"  Name="ExaminPanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <local:CapturePanel x:Name="Panel_Capture" Visibility="Hidden"/>
+                <local:MediaReviewPanel x:Name="Panel_MediaReview" Visibility="Hidden"/>
+                <local:CaseDetailPanel x:Name="Panel_CaseDetail" Visibility="Hidden" />
+                <local:VideoPlayer x:Name="Panel_VideoPlayer" Visibility="Hidden" />
+
+            </Grid>
+        </Grid>
+        
+        <!--<Grid Name="ExaminPanel" HorizontalAlignment="Left" Height="887" Margin="10,183,0,0" VerticalAlignment="Top" Width="1709">
+            <local:CapturePanel x:Name="Panel_Capture" Visibility="Hidden"/>
+            <local:MediaReviewPanel x:Name="Panel_MediaReview" Visibility="Hidden" Margin="0,75,0,71"/>
+            <local:CaseDetailPanel x:Name="Panel_CaseDetail" Visibility="Hidden" />
+        </Grid>-->
+
+    </Grid>
+</Page>

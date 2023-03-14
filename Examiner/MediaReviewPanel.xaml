@@ -1,0 +1,141 @@
+﻿<UserControl x:Class="Examiner.MediaReviewPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Examiner"
+             mc:Ignorable="d" Height="Auto" Width="Auto" Margin="50">
+    <Grid>
+        <ScrollViewer x:Name="MediaList">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                        <Image Margin="50" Source="/assets/images/case details/gallery_video.png" Stretch="Fill"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="4">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="5">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                        <Image Margin="125,130,125,130" Source="/assets/images/case details/gallery_video.png" Stretch="Fill"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="4">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/assets/images landscape/capture/capture.jpg" Stretch="Fill"/>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="5">
+                    <Border Margin="10,10,10,10" CornerRadius="20,20,20,20" Background="#FF07B7F3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Image Margin="0" Source="/assets/images/media review/gallery_addmedia.png" Stretch="Fill"/>
+                            </Grid>
+                            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+                                <Label Content="Import Image" FontSize="25" FontFamily="./assets/fonts/#Montserrat" HorizontalAlignment="Center" Margin="0,0,0,40" VerticalAlignment="Bottom" Foreground="White" FontWeight="Bold"/>
+                            </Grid>
+
+                        </Grid>
+
+
+                    </Border>
+
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+        <Grid x:Name="VideoplayerHost">
+            <Grid>
+                <!-- Add a ContentControl to host the SecondUserControl -->
+                <ContentControl x:Name="SecondUserControlHost" />
+                <!-- Add a button to show the SecondUserControl -->
+                
+            </Grid>
+        </Grid>
+
+    </Grid>
+   </UserControl>
